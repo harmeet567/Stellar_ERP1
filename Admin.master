@@ -1,0 +1,189 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+
+<link rel="stylesheet" href="styles/layout.css" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.slidepanel.setup.js"></script>
+<script type="text/javascript" src="scripts/jquery.cycle.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.cycle.setup.js"></script>
+<script type="text/javascript" language="javascript">
+    function disableBackButton() {
+        window.history.forward()
+    }
+    disableBackButton();
+    window.onload = disableBackButton();
+    window.onpageshow = function (evt) { if (evt.persisted) disableBackButton() }
+    window.onload = function () { void (0) }
+</script>
+<script type="text/javascript" language="javascript">
+javascript: window.history.forward(1);
+</script>
+    <title>Stellaredge</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+     
+    </asp:ContentPlaceHolder>
+     <style type="text/css">
+        .style1
+        {
+            width: 96%;
+            height: 22px;
+        }
+        .style2
+        {
+            height: 23px;
+            width: 902px;
+        }
+        .style3
+        {
+            width: 160px;
+        }
+         .style4
+         {
+             width: 96%;
+             height: 22px;
+             font-size: 38pt;
+         }
+         .style5
+         {
+             font-size: medium;
+         }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+    
+
+
+<div class="wrapper col1" style=" height:100px">
+  <div id="header" style=" height:80px">
+    <div id="logo">
+      <h1 style=" margin-top:15px"><span class="style1">&nbsp;&nbsp; </span> <a href="#" class="style3">
+          <span class="style4">Stellar</span></a></h1>
+     <p class="style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <span class="style2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+         <span class="style5">Edge</span></span></p>
+    </div>
+    <div id="topnav" style=" width:200px; height:50px; margin-right:200px" class="style3">
+      <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Size="Large" 
+                    ForeColor="White"></asp:Label>
+                <br />
+                <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Size="Medium" 
+                    ForeColor="White"></asp:Label>
+    </div>
+    <div style=" width:100px;  height:30px; margin-top:0px; margin-left:900px">
+        <asp:Button ID="Button1" runat="server" onclick="Button1_Click1" 
+            Text="Logout" />
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2" style=" height:15px; margin-top:0px">
+  <div id="breadcrumb" 
+        style=" width:960px; margin-top:0px; height:35px; top: -14px; left: 0px;">
+    <table style=" border-color: inherit; border-width: 0px; width:948px; margin-left:10px;  border-style:none; "> <tr>
+     <td style=" width:100%"> <asp:Menu ID="Menu1" runat="server" 
+             Orientation="Horizontal" Font-Size="11pt" 
+             ForeColor="Black" Height="20px" Width="960px">
+            <Items>
+                <asp:MenuItem Text="Finance" Value="finance">
+                    <asp:MenuItem Text="Modify Dues" Value="Dues" NavigateUrl="~/Dues_Modify.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Fees Entry" Value="Fees Entry" 
+                        NavigateUrl="~/FeesEntryAdmin.aspx"></asp:MenuItem>
+                    <asp:MenuItem></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Registration" Value=" ">
+                    <asp:MenuItem NavigateUrl="~/AdminTeacher_Reg.aspx" Text="Teacher" 
+                        Value="Teacher">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/AdminStudent_Reg.aspx" Text="Student" 
+                        Value="Student">
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Batch Allocation" Value="&nbsp;&nbsp;Batch Allocation">
+                    <asp:MenuItem Text="Add New Batch" 
+                        Value="Add New Batch" NavigateUrl="~/BatchTimeAllocation.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Modify Batches" Value="Modify Batches" 
+                        NavigateUrl="~/BatchTime.aspx">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Batchstudent_Allocation.aspx" 
+                        Text="Add Students in Batch" Value="Add Students in Batch"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/BatchStudent.aspx" Text="Update Batch Students" 
+                        Value="Update Batch Students"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="&nbsp;&nbsp;&nbsp;Change Password" 
+                    Value="&nbsp;&nbsp;&nbsp;Change Password" NavigateUrl="~/Changepswd_form.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="&nbsp;&nbsp;&nbsp;Uploads" Value="&nbsp;&nbsp;&nbsp;Uploads">
+                    <asp:MenuItem Text="News &amp; Events" Value="News &amp; Events">
+                        <asp:MenuItem NavigateUrl="~/News_Events.aspx" Text="Add New" Value="Add New">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/NewsEvent_Modify.aspx" Text="Modify Existing" 
+                            Value="Modify Existing"></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Training &amp; Placement" Value="Training &amp; Placement">
+                        <asp:MenuItem NavigateUrl="~/AdminTraining_Placements.aspx" Text="Add New " 
+                            Value="Add New "></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Modify_placement.aspx" Text="Modify " 
+                            Value="Modify "></asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="Courses" Value="Courses" NavigateUrl="~/Courses.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="View Feedbak" Value="View Feedbak" 
+                        NavigateUrl="~/Feedback _view.aspx"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="&nbsp;&nbsp;&nbsp;Teacher Detail" 
+                    Value="&nbsp;&nbsp;&nbsp;Teacher Detail">
+                    <asp:MenuItem NavigateUrl="~/Adminteacher_Mdify.aspx" Text="Teachers Details" 
+                        Value="Teachers Details"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/A_TeacherPasswrd.aspx" Text="Teachers Passwords" 
+                        Value="Teachers Passwords"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="&nbsp;&nbsp;&nbsp;Student Detail" 
+                    Value="&nbsp;&nbsp;&nbsp;Student Detail">
+                    <asp:MenuItem NavigateUrl="~/Adminstudent_Modify.aspx" Text="Students Details" 
+                        Value="Students Details"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/A_StudentPasswrds.aspx" Text="Students Passwords" 
+                        Value="Students Passwords"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="&nbsp;&nbsp;&nbsp;Enquiry Detail" Value="Enquiry Detail" 
+                    NavigateUrl="~/AdminEnquiry_Detail.aspx"></asp:MenuItem>
+            </Items>
+            </asp:Menu></td>
+
+        
+       </tr></table>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div id="container">
+  <div>
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Admin Content<br />
+        </p>
+        
+        </asp:ContentPlaceHolder>
+        </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+
+<div class="wrapper col5">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2012 - All Rights Reserved - StellarEdge</p>
+    <br class="clear" />
+  </div>
+</div>
+
+    </form>
+</body>
+</html>

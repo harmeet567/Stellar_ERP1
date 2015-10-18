@@ -1,0 +1,37 @@
+Format for the 6-Months Industrial Training Final Report
+(Mandatory to be followed)
+Students are advised to submit their Synopsis, Midterm report, Final Report, daily diary and CD and any other supporting material related to Six months Ind...ustrial, in a yellow coloured envelope.
+At the time of internal viva students has to give this envelope to the Panel for the Viva Examination. Panel will also check the working of your project, so students are advised to make necessary arrangements.
+Further Guidelines for Final Report are as follows
+1. For Front page format kindly visit the college website
+2. Certificate (Photostat Copy)
+3. Acknowledgements
+4. Table of Contents (with page numbers)
+5. Table of figures
+6. Table of abbreviations
+7. There should be brief overview of the company/ organization
+8. There should be overview of the Problem Statement, Objective of the New System and the software/ hardware requirements.
+9. Design Methodology (including DFDs, ER Diagram, and Flow charts)
+a. Database design
+b. Implementation
+10. Project Legacy
+i. Conclusion
+ii. Remaining areas of concern
+iii. Future scope
+11. Project Screen Shots with Explanations
+12. References and Bibliography (at the last)
+13. Header: Name of the Project
+14. Footer: Page No. (Center Aligned) must start from the company overview onward.
+15. Each figure must be number and center aligned.
+16. Report should be Hard Binding (Black Color). All students/ groups are required to submit 2 copies of the report. One for the department, and one as Personal Copy.
+17. Each report should carry one CD containg documentation of the report and source code of the project. Student name & Project Name must be written on CD
+18. Main heading font size 18 and sub heading font size 16. Content font size 12.
+19. Font: Times new roman
+20. Spacing between lines is 1.5 and alignment is justified style.
+21. Left margin=2.5 cm, Top margin=Right margin=Bottom margin= 1.5 cm
+22. Paper size=A4
+23. There is no need to attach source code in the report.
+
+Sukhjit Singh Sehra
+Training and Placement Coordinator
+CSE Department

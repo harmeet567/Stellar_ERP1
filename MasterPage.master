@@ -1,0 +1,291 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+<link rel="stylesheet" href="styles/layout.css" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.slidepanel.setup.js"></script>
+<script type="text/javascript" src="scripts/jquery.cycle.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.cycle.setup.js"></script>
+<script type="text/javascript" language="javascript">
+ javascript: window.history.forward(1);
+</script>
+<script type="text/javascript" src="js/stscode.js"></script>
+ <title>stellaredge</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <style type="text/css">
+        .style1
+        {
+            font-size: medium;
+        }
+        .style2
+        {
+            font-size: 38pt;
+        }
+        .style3
+        {
+            color: #FFFFFF;
+        }
+        .style6
+       {
+           font-weight: normal;
+           color: #000000;
+       }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+<%--############################################################################################################///////////--%>
+
+<div class="wrapper col0" >
+  <div id="topbar">
+    <%--<div id="slidepanel">
+      <div class="topbox">
+        <h2>Teachers And Students</h2>
+        <p>Teachers and Students if you are loging in first time then enter your ID given by Admin and 
+        then enter a password you want and it will will be set as your passwor</p>
+        <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+      </div>
+      <div class="topbox">
+        <h2>Select your type</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Select your type</legend>
+            <label for="teachername">User Type:
+              <asp:DropDownList ID="DropDownList1" runat="server" Width="200px">
+            <asp:ListItem>Admin</asp:ListItem>
+            <asp:ListItem>Teacher</asp:ListItem>
+            <asp:ListItem>Student</asp:ListItem>
+        </asp:DropDownList>
+
+        <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Size="Large" 
+            ForeColor="Yellow"></asp:Label>
+              </label>
+            &nbsp;<p>
+              &nbsp;&nbsp;&nbsp;
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <div class="topbox last">
+        <h2>Login Here</h2>
+        <form action="#" method="post">
+          <fieldset>
+            <legend>Login Form</legend>
+            <label for="pupilname">UserID:
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+              
+            </label>
+            <label for="pupilpass">Password:
+            <asp:TextBox ID="TextBox2" runat="server" TextMode="Password"></asp:TextBox>
+              
+            </label>
+            &nbsp;<p>
+
+              <asp:Button ID="Button2" runat="server" Text="LogIn " Width="54px" 
+             Height="22px" />
+              &nbsp;
+              <asp:Button ID="Button1" runat="server" Text="Reset " Width="54px" 
+            Height="22px" />
+            </p>
+          </fieldset>
+        </form>
+      </div>
+      <br class="clear" />
+    </div>--%>
+    <div id="loginpanel">
+      <ul>
+        <li class="left">Log In Here &raquo;</li>
+        <li class="right" id="toggle"><a id="slideit" href="LogIn_page.aspx">USER</a><%--<a id="closeit" style="display: none;" href="#slidepanel">Close Panel</a>--%></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col1" >
+  <div id="header"  style=" margin-top:0">
+    <div id="logo" style=" margin-top:0; height: 78px;">
+     <h1><span class="style3">&nbsp;&nbsp; </span> <a href="Homepage.aspx"><span class="style2">Stellar</span></a></h1>
+     <p class="style3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <span class="style1">Edge</span></p>
+    </div>
+    <div id="topnav">
+      <ul>
+        <li class="active" ><a href="Enqiury_form.aspx">Enquiry Form</a></li>
+        <li><a href="Training_p_home.aspx">Training & Placement</a></li>
+        <li><a href="Home_Courses.aspx">Courses</a></li>
+        <li><a href="Feeddback_page.aspx">Feedback</a></li>
+        <li class="last"><a href="Aboutus_page.aspx">About us</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col2">
+  <div id="featured_slide">
+    <div class="featured_box"><a href="#">
+        <img src="images/stellarimage1.PNG" alt="" style="width: 480px; height: 280px;" /></a>
+      <div class="floater">
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/images/stellar.PNG" 
+              Height="280px" Width="480px" />
+              </div>
+              </div>
+
+    <div class="featured_box"><a href="#"><img src="images/stellarimage2.PNG" alt="" style="width: 480px; height: 280px;"/></a>
+      <div class="floater">
+        <asp:Image ID="Image2" runat="server" ImageUrl="~/images/stellar.PNG" Height="280px" Width="480px" />
+      </div>
+    </div>
+
+    <div class="featured_box"><a href="#"><img src="images/stellarimage3.PNG" alt="" style="width: 480px; height: 280px;"/></a>
+      <div class="floater">
+        <asp:Image ID="Image3" runat="server" ImageUrl="~/images/stellar.PNG" Height="280px" Width="480px"/>
+      </div>
+    </div>
+
+    <div class="featured_box"><a href="#"><img src="images/stellarimage4.PNG" alt="" style="width: 480px; height: 280px;"/></a>
+    <div class="floater">
+        <asp:Image ID="Image4" runat="server" ImageUrl="~/images/stellar.PNG" Height="280px" Width="480px" />
+      </div>
+    </div>
+     <div class="featured_box"><a href="#"><img src="images/stellarimage5.PNG" alt="" style="width: 480px; height: 280px;"/></a>
+      <div class="floater">
+        <asp:Image ID="Image5" runat="server" ImageUrl="~/images/stellar.PNG" Height="280px" Width="480px"/>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper col3">
+  <div id="homecontent">
+    <div class="fl_left" style=" width:750px;">
+       
+        
+      <div>
+          <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >
+        
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                  &nbsp;</p>
+              <p style="margin-top: 0px; margin-bottom: 0px">
+                <br />
+            </p>
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        <br />
+        <br />
+    </div>
+    <div class="fl_right" style=" width:200px; height:560px">
+     
+        <div style="border: thin solid #B4B4B4; width: 195px; position: absolute;  height: 270px; background-color: #00CCFF;">
+                
+                    <asp:Panel ID="Panel2" runat="server" BackColor="#0099FF" Font-Bold="True" 
+                        Font-Overline="False" Font-Size="Large" BorderColor="Black" 
+                        BorderStyle="None">
+                         <span class="style6">News &amp; Events</span>
+                        </asp:Panel>
+                        <marquee direction ="up" scrollamount="4" onmouseover="stop()" onmouseout= "start()" >
+                        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+                            <ItemTemplate>
+                            <asp:Label ID="Label1" runat="server" Text='<%#Eval("Description") %>'></asp:Label> <br /><br />
+                            </ItemTemplate>
+                        </asp:Repeater></marquee>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" 
+                            ConnectionString="<%$ ConnectionStrings:stellarerpConnectionString %>" 
+                            SelectCommand="SELECT [Description] FROM [NewsTable]"></asp:SqlDataSource>
+                    
+                
+                </div>
+  <br />
+                <div style="border: thin solid #B4B4B4; width : 195px; position: absolute;  background-color: #00CCFF; margin-top:270px; height:270px">
+                
+                    <asp:Panel ID="Panel3" runat="server" BackColor="#0099FF" Font-Bold="True" 
+                        Font-Overline="False" Font-Size="Large">
+                        <span class="style6">Training&amp;Placements</span></asp:Panel>
+                <marquee direction ="up" scrollamount="4" onmouseover="stop()" onmouseout= "start()" >
+                <asp:Repeater ID="Repeater2" runat="server" DataSourceID="SqlDataSource2">
+                 <ItemTemplate>
+                            <asp:Label ID="Label1" runat="server" Text='<%#Eval("Description") %>'></asp:Label> <br /><br />
+                            </ItemTemplate>
+                    </asp:Repeater></marquee>
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" 
+                        ConnectionString="<%$ ConnectionStrings:stellarerpConnectionString %>" 
+                        SelectCommand="SELECT [Description] FROM [PlacementTable]">
+                    </asp:SqlDataSource>
+                
+                </div>
+
+     
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2012 - All Rights Reserved - StellarEdge 
+        Solution</p>
+    <br class="clear" />
+  </div>
+</div>
+
+<%--########################################################################################################//////////////--%>
+
+
+    
+    </form>
+</body>
+</html>
